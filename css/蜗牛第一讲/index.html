@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .warpper{
+            color: brown;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 100px;
+            transition/*动画效果*/: all 1s;
+
+        }
+        .active{
+            width: 300px;
+            height: 300px;
+        }
+        /* .warpper:hover{
+            width: 300px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="warpper"id="warpper">123456</div>
+    <script>
+        var test=document.getElementById("warpper")
+        // console.log(test);
+        var isAcitve=false
+        test.addEventListener('click',function(){
+            isAcitve=!isAcitve
+            if(isAcitve==true){
+                test.classList.add('active') 
+            }else{
+                test.classList.remove('active')
+            }
+                 
+            /*给原生js添加类名*/
+        })
+    </script>
+
+</body>
+</html>
